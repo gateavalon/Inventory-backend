@@ -1,0 +1,51 @@
+# Project
+
+Project runs based on nodejs Express, process order items.
+
+## Installation & Start Server
+
+Run `yarn install` to install all dependencies
+Run `yarn dev`to start the server
+Go to port 8000 and test if the log "API is running on port 8000" is displayed
+
+## Unit test
+
+Run the command `yarn test`
+
+## Sending Request
+
+using Postman or Insomnia, send order data like below
+
+```json
+{
+  order: [
+    {
+      productName: "Google Home",
+      qty: 2,
+    },
+    {
+      productName: "Macbook Pro",
+      qty: 1,
+    },
+  ]
+};
+```
+
+## Response returned
+
+The successful resposne should be (for example):
+
+```json
+{
+    "total": "5825.62",
+    "message": "Purchase successful"
+}
+```
+
+## Out of stock response
+
+Out of stock response would be (for example): Sorry, we don't have enough Google Home in our inventory. Please try again later
+
+## Docker-Compose
+
+run the command `docker-compose up` to get the image and container setup
